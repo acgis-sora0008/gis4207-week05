@@ -22,8 +22,8 @@ def desc_feature_class(fc):
     print(f'{"BaseName":13} {desc["baseName"]}\n{"CatalogPath":13} {desc["catalogPath"]}\n{"DataType":13} {desc["dataType"]}')
     fields = desc["fields"]
 
-    print(f'{"Field Name":15} {"Field Type":15} {"Field Length":9}')
-
+    print(f'\n{"Field Name":15} {"Field Type":15} {"Field Length":9}')
+    print('-'*45)
     for field in fields:
         print(f'{field.name:15} {field.type:15} {field.length:9}')
 
