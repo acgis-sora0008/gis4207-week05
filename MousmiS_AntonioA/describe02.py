@@ -1,17 +1,11 @@
-# desc
-# 1 A
-# 2 M
-# 3 A
-# 4 M
-# 5 A
-# 6 M
+import arcpy
 
-# list
-# 1 M
-# 2 A
-# 3 M
-# 4 A
-# 5 M
-# 6 A
-# 7 M
-# 8 A
+fc = (r'..\..\..\..\data\Canada\province.shp')
+
+descfc = arcpy.Describe(fc)
+
+descBaseName = descfc.BaseName
+descCatPath = descfc.CatalogPath
+descDataType = descfc.DataType
+
+print (f'{"BaseName":13} {descBaseName}\n{"CatalogPath":13} {descCatPath}\n{"DataType":13} {descDataType}')
