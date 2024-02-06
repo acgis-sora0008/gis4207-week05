@@ -18,10 +18,10 @@ def main():
         sys.exit()
     list_feat_class(env.workspace)
 
-def list_feat_class(feature_classes):
+def list_feat_class(work_space):
     """Prints the requested characteristics of the feature class"""
-    feature_classes = arcpy.ListFeatureClasses()
-    for classes in feature_classes:
+    work_space = arcpy.ListFeatureClasses()
+    for classes in work_space:
         print(classes)
 
 
