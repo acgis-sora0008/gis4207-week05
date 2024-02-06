@@ -30,6 +30,15 @@
         "justMyCode": true,
         "args": ["..\\..\\..\\..\\data\\Canada\\province.shp"]
 
+        },
+        {           
+        "name": "list02",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal",
+        "justMyCode": true,
+        "args": ["..\\..\\..\\..\\data\\SanFrancisco"]
         }
     ]
 }

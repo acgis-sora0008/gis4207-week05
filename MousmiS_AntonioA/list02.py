@@ -1,20 +1,31 @@
-import arcpy
+
 import sys
-import os
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-workspace = os.path.join(script_dir, "..", "..", "..", "..", "data", "Week05_Data", "SanFrancisco")
-arcpy.env.workspace = workspace
+def main():
+    """Checks that there is a commmand line argument. If it is then, it ensures called feature class exists. If it does exist, calls the desc_feature_class(fc)"""
+    global arcpy 
+    from arcpy import env
 
-def desc_feature_class(workspace):
-    desc = arcpy.da.Describe(workspace)
-    print(f'{"BaseName":13} {desc["baseName"]}\n{"CatalogPath":13} {desc["catalogPath"]}\n{"DataType":13} {desc["dataType"]}')
-    
-    
-if len(sys.argv) !=2:
-    print("Usage: list02 <FeatureClassName>")    
-    sys.exit()
-    
-else:
-    class_arg = sys.argv[1]
-    desc_feature_class(workspace)
+    if len(sys.argv) != 2:
+        print ("Usage: list02.py <FeatureClassName>")
+        sys.exit()
+
+    env.workspace = sys.argv[1]
+    import arcpy
+
+    if not arcpy.Exists(env.workspace):
+        print (f'{env.workspace}, "does not exist"')
+        sys.exit()
+    list_feat_class(env.workspace)
+
+def list_feat_class(feature_classes):
+    """Prints the requested characteristics of the feature class"""
+    feature_classes = arcpy.ListFeatureClasses()
+    for classes in feature_classes:
+        print(classes)
+
+
+if __name__ == "__main__":
+    main()
+
+
