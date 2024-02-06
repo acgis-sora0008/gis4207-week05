@@ -2,7 +2,7 @@
 import sys
 
 def main():
-    """Checks that there is a commmand line argument. If it is then, it ensures called feature class exists. If it does exist, calls the desc_feature_class(fc)"""
+    """Checks that there is a commmand line argument. If it is then, it ensures called feature class exists. If it does exist, calls the list_feat_class()"""
     global arcpy 
     from arcpy import env
 
@@ -15,11 +15,17 @@ def main():
 
     env.workspace = workspace
 
-    import arcpy
+    valid_feature_type = ['Annotation', 'Arc', 'Dimension', 'Edge', 'Junction', 'Label', 'Line', 'Multipatch', 'Multipoint', 'Node', 'Point', 'Polygon', 'Polyline', 'Region', 'Route', 'Tic', 'All']
+    if not feature_type in valid_feature_type:
+        print (f'{feature_type}, "is not valid"')
+        sys.exit()
 
+    import arcpy
     if not arcpy.Exists(workspace):
         print (f'{workspace}, "does not exist"')
         sys.exit()
+
+
     list_feat_class(workspace, feature_type)
 
 

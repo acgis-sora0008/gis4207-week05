@@ -2,7 +2,7 @@
 import sys
 
 def main():
-    """Checks that there is a commmand line argument. If it is then, it ensures called feature class exists. If it does exist, calls the desc_feature_class(fc)"""
+    """Checks that there is a commmand line argument. If it is then, it ensures called feature class exists. If it does exist, calls the list_feat_class()"""
     global arcpy 
     from arcpy import env
 
