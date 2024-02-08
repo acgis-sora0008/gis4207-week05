@@ -1,9 +1,9 @@
 import sys
 import os
 
-root_folder = r'..\..\..\data'
-for rf in os.walk(root_folder):
-    print(rf)
+# root_folder = r'..\..\..\data'
+# for rf in os.walk(root_folder):
+#     print(rf)
     
 def main():
     global root_folder
@@ -16,7 +16,7 @@ def main():
     if not os.path.exists(root_folder):
         print(f"{root_folder} does not exist.")
         sys.exit()
-        
+
     list_folders(root_folder)     
     
 
