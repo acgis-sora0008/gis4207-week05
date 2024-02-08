@@ -57,6 +57,15 @@
         "console": "integratedTerminal",
         "justMyCode": true,
         "args": ["..\\..\\..\\..\\data\\SanFrancisco"]
+        },
+        {           
+        "name": "list05",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal",
+        "justMyCode": true,
+        "args": ["..\\..\\..\\..\\data"]
         }
     ]
 }
