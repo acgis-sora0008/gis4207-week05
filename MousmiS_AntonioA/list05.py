@@ -16,7 +16,8 @@ def main():
     if not os.path.exists(root_folder):
         print(f"{root_folder} does not exist.")
         sys.exit()
-
+        
+    list_folders(root_folder)     
     
 
 def list_folders(root_folder):
@@ -28,7 +29,7 @@ def list_folders(root_folder):
         print(f"Files: {filenames}")
         for dirname in dirnames:
             print(os.path.join(dirpath, dirname))
-list_folders(root_folder)            
+       
 
 if __name__ == "__main__":
     main()
