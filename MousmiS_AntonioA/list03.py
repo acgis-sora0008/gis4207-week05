@@ -7,7 +7,7 @@ def main():
     from arcpy import env
 
     if len(sys.argv) != 3:
-        print("Usage: list02.py <Workspace> <FeatureType>")
+        print("Usage: list03.py <Workspace> <FeatureType>")
         sys.exit()
 
     workspace = sys.argv[1]

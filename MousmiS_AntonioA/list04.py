@@ -45,7 +45,8 @@ def main():
  
     root_folder = sys.argv[1]
     # workspace = sys.argv[2]
-    import arcpy
+    import arcpy  
+    
 
     list_workspace(root_folder)
 

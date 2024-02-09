@@ -56,10 +56,28 @@
         "program": "${file}",
         "console": "integratedTerminal",
         "justMyCode": true,
-        "args": ["..\\..\\..\\..\\data\\SanFrancisco"]
+        "args": ["..\\..\\..\\..\\data"]
         },
         {           
         "name": "list05",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal",
+        "justMyCode": true,
+        "args": ["..\\..\\..\\..\\data"]
+        },
+        {           
+        "name": "list06",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal",
+        "justMyCode": true,
+        "args": ["..\\..\\..\\..\\data"]
+        },
+        {           
+        "name": "list07",
         "type": "debugpy",
         "request": "launch",
         "program": "${file}",
