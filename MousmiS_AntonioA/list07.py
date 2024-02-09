@@ -17,6 +17,8 @@ def main():
 
     import arcpy
     list_workspaces(root_folder)
+
+    
 def list_workspaces(root_folder):
     if not os.path.exists(root_folder):
         print(f"The specified root folder '{root_folder}' does not exist.")
@@ -44,7 +46,7 @@ def list_workspaces(root_folder):
 
 if __name__ == "__main__":
     main()       
-# main()     
+  
 
 
 

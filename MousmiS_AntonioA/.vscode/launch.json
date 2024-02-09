@@ -84,6 +84,15 @@
         "console": "integratedTerminal",
         "justMyCode": true,
         "args": ["..\\..\\..\\..\\data"]
+        },
+        {           
+        "name": "list08",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal",
+        "justMyCode": true,
+        "args": ["..\\..\\..\\..\\data", "Point", "list08.txt"]
         }
     ]
 }
